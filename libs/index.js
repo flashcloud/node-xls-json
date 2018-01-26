@@ -64,13 +64,13 @@ CV.prototype.cvjson = function(csv, output, callback) {
       if(output !== null) {
       	var stream = fs.createWriteStream(output, { flags : 'w' });
       	stream.write(JSON.stringify(record));
-      	callback(null, record);
+      	callback(null, record, output);
       } else {
-      	callback(null, record);
+      	callback(null, record, output);
       }
       
     })
     .on('error', function(error){
-      callback(error, null);
+      callback(error, null, output);
     });
 }
