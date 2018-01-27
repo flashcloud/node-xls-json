@@ -18,7 +18,7 @@ Converting xls file to json files using nodejs
     input: "sample.xls",  // input xls
     output: "output.json", // output json
     sheet: "sheetname"  // specific sheetname
-  }, function(err, result) {
+  }, function(err, result, output) {
     if(err) {
       console.error(err);
     } else {
